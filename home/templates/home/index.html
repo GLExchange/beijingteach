@@ -9,137 +9,151 @@
 <!--FlexSlider-->
 <link rel="stylesheet" href="/static/css/flexslider.css" type="text/css" media="screen" />
 <!--End-slider-style-->    
+<style>
+@media (min-width: 992px) {
+  .welcome-left p {
+    height: 54px;
+  }
+}
+</style>
 {% endblock %}
 
 {% block main %}
-    <!--start-fbsdk-->
-    <div id="fb-root"></div>
-    <!--end-fbsdk-->
-    <!--start-banner-->
-    <div class="banner"></div>
-    <!--end-banner-->
-    <!--start-provide-->
-    <div class="provide">
-        <a href="{% url 'customized_page' 'about' %}">
-            <div class="col-md-4 provide-left provide-one">
-                <h5></h5>
-                <h3>MAKE A DIFFERENCE </h3>
-                <p>Learn more about GLE as we strive to make a difference.</p>
-                <p>Lets educate China together.</p>
-            </div>
-        </a>
-        <a href="{% url 'customized_page' 'experience' %}">
-            <div class="col-md-4 provide-left provide-two">
-                <h5></h5>
-                <h3>THE EXPERIENCE </h3>
-                <p>What is it like to teach in China? </p>
-                <p>Learn about all of the wonderful things China has to offer.</p>
-            </div>
-        </a>
-        <a href="{% url 'apply' %}">
-            <div class="col-md-4 provide-left provide-tre">
-                <h5></h5>
-                <h3>APPLY NOW! </h3>
-                <p>Join us as we change young lives while educating them on the English language.</p><p></p>
-            </div>
-        </a>
-        <div class="clearfix"></div>
+<!--start-fbsdk-->
+<div id="fb-root"></div>
+<!--end-fbsdk-->
+<!--start-banner-->
+<div class="banner"></div>
+<!--end-banner-->
+<!--start-provide-->
+<div class="provide">
+  <a href="{% url 'customized_page' 'about' %}">
+    <div class="col-md-4 provide-left provide-one">
+      <h5></h5>
+      <h3>MAKE A DIFFERENCE </h3>
+      <p>Learn more about GLE as we strive to make a difference.</p>
+      <p>Lets educate China together.</p>
     </div>
-    <!--end-provide-->
-    <!--start-welcome-->
-    <div class="welcome">
-        <div class="container">
-            <div class="welcome-top">
-                <div class="col-md-6 welcome-left">
-                    <h3>Our Mission</h3>
-                    <h4>We provide comprehensive compensation packages.</h4>
-                    <p>In any situation where a teacher is reasonably in need, you will have a strong support system to lean on.</p>
-                    <div class="w-btn">
-                        <a href="{% url 'customized_page' 'about' %}" class="hvr-shutter-out-horizontal">Read More</a>
-                    </div>
-                </div>
-                <div class="col-md-6 welcome-left">
-                    <h3>How do We Work?</h3>
-                    <h4>We will try our best to accommodate your preference</h4>
-                    <p>Current demand in China is greatest for kindergarten and early childhood development. Please let us know if you have a strong preference for working with older students, and we will try our best to accommodate you.</p>
-                    <div class="w-btn">
-                        <a href="{% url 'customized_page' 'experience' %}" class="hvr-shutter-out-horizontal">Read More</a>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
+  </a>
+  <a href="{% url 'customized_page' 'experience' %}">
+    <div class="col-md-4 provide-left provide-two">
+      <h5></h5>
+      <h3>THE EXPERIENCE </h3>
+      <p>What is it like to teach in China? </p>
+      <p>Learn about all of the wonderful things China has to offer.</p>
+    </div>
+  </a>
+  <a href="{% url 'apply' %}">
+    <div class="col-md-4 provide-left provide-tre">
+      <h5></h5>
+      <h3>APPLY NOW! </h3>
+      <p>Join us as we change young lives while educating them on the English language.</p><p></p>
+    </div>
+  </a>
+  <div class="clearfix"></div>
+</div>
+<!--end-provide-->
+<!--start-welcome-->
+<div class="welcome">
+  <div class="container">
+    <div class="welcome-top">
+      <div class="col-md-6 welcome-left">
+        <h3>Our Mission</h3>
+        <h4>We provide comprehensive compensation packages.</h4>
+        <p>In any situation where a teacher is reasonably in need, you will have a strong support system to lean on.</p>
+        <div class="w-btn">
+          <a href="{% url 'customized_page' 'about' %}" class="hvr-shutter-out-horizontal">Read More</a>
         </div>
-    </div>
-    <!--end-welcome-->
-    <!--start-join-->
-    <div class="join">
-        <div class="container">
-            <div class="join-main">
-                <div class="col-md-3 join-left">
-                    <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-                    <h4>Work hours</h4>
-                    <p>Typically, teachers will have multiple classes throughout the day, each lasting between 15 and 50 minutes.</p>
-                </div>
-                <div class="col-md-3 join-left">
-                    <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                    <h4>Easy transition</h4>
-                    <p>You will receive temporary housing with many other new teachers where you'll go through an orientation on life in China.</p>
-                </div>
-                <div class="col-md-3 join-left">
-                    <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-                    <h4>Life in China</h4>
-                    <p>Beautiful days here in China! We're just clowning around with these kids! Come to China! Apply today to change your life!</p>
-                </div>
-                <div class="col-md-3 join-left">
-                    <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
-                    <h4>Competitive salaries</h4>
-                    <p>Our teachers have very strong purchasing power and are paid well above the average Chinese persons salary.</p>
-                </div>
-                <div class="clearfix"></div>
-            </div>
+      </div>
+      <div class="col-md-6 welcome-left">
+        <h3>How do We Work?</h3>
+        <h4>We will try our best to accommodate your preference</h4>
+        <p>Current demand in China is greatest for kindergarten and early childhood development. Please let us know if you have a strong preference for working with older students, and we will try our best to accommodate you.</p>
+        <div class="w-btn">
+          <a href="{% url 'customized_page' 'experience' %}" class="hvr-shutter-out-horizontal">Read More</a>
         </div>
+      </div>
+      <div class="clearfix"></div>
     </div>
-    <!--end-join-->
-    <!--start-news-->
-    <div class="news">
-        <div class="container">
-            <div class="news-top">
-                <div class="col-md-8 news-left">
-                    <div class="news-heading">
-                        <h3>TESTIMONIALS</h3>
-                    </div>
-                    <div class="news-bottom">
-                        <div class="news-one">
-                            <div class="news-one-left">
-                                <img src="/static/images/n-1.jpg" alt="" />
-                            </div>
-                            <div class="news-one-right">
-                                <h4>Smooth transition</h4>
-                                <p>"When I decided to go to China to teach, I didn't have a clue where to start. BeijingTeach answered all my questions and helped me through the entire process, making it as easy as possible. I had enough to think and worry about without having to handle all the details. Before I knew it, I was in Beijing, had a fun job, met a lot of friends and having a great time.  They made the move and transition incredibly smoother than I anticipated and have immediately helped me with any problems I've encountered"</p>
-                                <p>- Max A. (Denver, CO)</p>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="news-one">
-                            <h4>A new direction of life</h4>
-                            <p>"After graduating from George Washington University, I wasn’t sure what direction I wanted to take my life in. I wanted to do something exciting and adventurous and I ultimately decided to go to Beijing to teach English. I didn’t know anything about what it’s like to live and work in China, and BeijingTeach really made the move over here as easy-going as possible. They took care of everything for me; set me up with a visa, a great job, and spacious apartment. I have traveled extensively throughout Asia and I now feel as if the world is my oyster, not to mention that I save a good chunk of change every month."</p>
-                            <p>- Alex Brotman (Boston, MA)</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 news-right">
-                    <div class="news-heading">
-                        <h3>News</h3>
-                    </div>
-                    <div class="news-btm">
-                        <div class="fb-page" data-href="https://www.facebook.com/BeijingTeach" data-width="350" data-height="650" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/BeijingTeach"><a href="https://www.facebook.com/BeijingTeach">BeijingTeach</a></blockquote></div></div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
+  </div>
+</div>
+<!--end-welcome-->
+<!--start-join-->
+<div class="join">
+  <div class="container">
+    <div class="join-main">
+      <div class="col-md-3 join-left">
+        <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+        <h4>Work hours</h4>
+        <p>Typically, teachers will have multiple classes throughout the day, each lasting between 15 and 50 minutes.</p>
+      </div>
+      <div class="col-md-3 join-left">
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+        <h4>Easy transition</h4>
+        <p>You will receive temporary housing with many other new teachers where you'll go through an orientation on life in China.</p>
+      </div>
+      <div class="col-md-3 join-left">
+        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+        <h4>Life in China</h4>
+        <p>Beautiful days here in China! We're just clowning around with these kids! Come to China! Apply today to change your life!</p>
+      </div>
+      <div class="col-md-3 join-left">
+        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+        <h4>Competitive salaries</h4>
+        <p>Our teachers have very strong purchasing power and are paid well above the average Chinese persons salary.</p>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!--end-join-->
+<!--start-news-->
+<div class="news">
+  <div class="container">
+    <div class="news-top">
+      <div class="col-md-8 news-left">
+        <div class="news-heading">
+          <h3>TESTIMONIALS</h3>
         </div>
+        <div class="news-bottom">
+          <div class="news-one">
+            <div class="news-one-left">
+              <img src="/static/images/n-1.jpg" alt="" />
+            </div>
+            <div class="news-one-right">
+              <h4>Smooth transition</h4>
+              <p>"When I decided to go to China to teach, I didn't have a clue where to start. BeijingTeach answered all my questions and helped me through the entire process, making it as easy as possible. I had enough to think and worry about without having to handle all the details. Before I knew it, I was in Beijing, had a fun job, met a lot of friends and having a great time.  They made the move and transition incredibly smoother than I anticipated and have immediately helped me with any problems I've encountered"</p>
+              <p>- Max A. (Denver, CO)</p>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="news-one">
+            <h4>A new direction of life</h4>
+            <p>"After graduating from George Washington University, I wasn’t sure what direction I wanted to take my life in. I wanted to do something exciting and adventurous and I ultimately decided to go to Beijing to teach English. I didn’t know anything about what it’s like to live and work in China, and BeijingTeach really made the move over here as easy-going as possible. They took care of everything for me; set me up with a visa, a great job, and spacious apartment. I have traveled extensively throughout Asia and I now feel as if the world is my oyster, not to mention that I save a good chunk of change every month."</p>
+            <p>- Alex Brotman (Boston, MA)</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 news-right">
+        <div class="news-heading">
+          <h3>News</h3>
+        </div>
+        <div class="news-btm">
+          <div class="fb-page" data-href="https://www.facebook.com/BeijingTeach" data-width="350" data-height="650"
+            data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true">
+            <div class="fb-xfbml-parse-ignore">
+              <blockquote cite="https://www.facebook.com/BeijingTeach">
+                <a href="https://www.facebook.com/BeijingTeach">BeijingTeach</a>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
     </div>
-    <!--end-news-->
+  </div>
+</div>
+<!--end-news-->
 {% endblock %}
 
 
