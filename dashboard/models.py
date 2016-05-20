@@ -40,7 +40,7 @@ class PagePosManager(models.Manager):
         return pp[0].page if pp else None
 
     def get_headers(self, sort=True):
-        raw_setting = SiteSetting.get('header_links')
+        raw_setting = SiteSetting.get('header_links', '')
         links = raw_setting.split('|')
         link_set = self.filter(slug__in=links)
         if sort:
@@ -81,6 +81,7 @@ class SiteSetting(models.Model):
         return '{ "%s": "%s" }' % (self.key, self.value)
 
     # needn't a set method cus it's for administrator in admin
+    # never write other get methods here, see also at `home/templatetags/tags.py`
     @classmethod
     def get(cls, k, default=None):
         k_set = cls.objects.filter(key=k)

@@ -23,6 +23,48 @@ class Command(BaseCommand):
                 'value': '|'.join(d['slug'] for d in page_pos_init_data)
             },
         },
+        {
+            'key': 'address_line_1',
+            'defaults': {
+                'value': 'GlobalLearningExchange.com'
+            },
+        },
+        {
+            'key': 'address_line_2',
+            'defaults': {
+                'value': '38 saint marks place'
+            },
+        },
+        {
+            'key': 'address_line_3',
+            'defaults': {
+                'value': 'Roslyn heights, NY 11577'
+            },
+        },
+        {
+            'key': 'phone',
+            'defaults': {
+                'value': '+1 516 535 9236'
+            },
+        },
+        {
+            'key': 'copyright',
+            'defaults': {
+                'value': '2016 GlobalLearningExchange.com'
+            },
+        },
+        {
+            'key': 'facebook_link',
+            'defaults': {
+                'value': 'http://www.facebook.com/BeijingTeach'
+            },
+        },
+        {
+            'key': 'twitter_link',
+            'defaults': {
+                'value': 'http://www.twitter.com/BeijingTeach'
+            },
+        },
     ]
 
     def add_arguments(self, parser):

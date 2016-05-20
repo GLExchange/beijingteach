@@ -1,4 +1,4 @@
-{% load header_links %}
+{% load tags %}
 
 {% autoescape off %}
 <!DOCTYPE html>
@@ -56,30 +56,7 @@
     {% endblock %}
 
     {% block footer %}
-    <!--start-footer-->
-    <div class="footer">
-      <div class="container">
-        <div class="footer-main">
-          <div class="col-md-4 footer-left">
-            <span class="glyphicon glyphicon-map-marker map-marker" aria-hidden="true"></span>
-            <p>BeijingTeach.com, <span>38 St. Marks Place Roslyn,</span> NY 11577.</p>
-          </div>
-          <div class="col-md-4 footer-left">
-            <span class="glyphicon glyphicon-phone map-marker" aria-hidden="true"></span>
-            <p>+1 516 535 9236</p>
-          </div>
-          <div class="col-md-4 footer-left">
-            <p class="footer-class">© 2015 China Teach. All Rights Reserved. </p>
-            <ul>
-              <li><a href="http://www.facebook.com/BeijingTeach"><span class="fb"></span></a></li>
-              <li><a href="http://www.twitter.com/BeijingTeach"><span class="twit"></span></a></li>
-            </ul>
-          </div>
-          <div class="clearfix"></div>
-        </div>
-      </div>
-    </div>
-    <!--end-footer-->
+    {% show_footer %}
     {% endblock %}
 
     {% block javascript %}
