@@ -67,10 +67,17 @@ class PagePosManager(models.Manager):
         pp = self.filter(**kwargs)
         return pp[0].page if pp else None
 
-    def get_headers(self):
+    def get_headers(self, sort=True):
         raw_setting = SiteSetting.get('header_links')
         links = raw_setting.split('|')
-        return self.filter(slug__in=links)
+        link_set = self.filter(slug__in=links)
+        if sort:
+            result = list()
+            for link in links:
+                result.append(link_set.get(slug=link))
+        else:
+            result = list(link_set)
+        return result
 
 
 class PagePos(Position):
