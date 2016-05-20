@@ -1,20 +1,13 @@
 import os
 from django.conf import settings
 from django.core.management.base import BaseCommand
-from dashboard.models import Page, SnippetPos, PagePos, SiteSetting
+from dashboard.models import Page, PagePos, SiteSetting
 from basic_templates import Translator
 
 MARK_FILE_PATH = os.path.join(settings.BASE_DIR, 'basic_templates')
 
 
 class Command(BaseCommand):
-
-    snippet_pos_init_data = [
-        {'slug': 'about'},
-        {'slug': 'experience'},
-        {'slug': 'china'},
-        {'slug': 'accommodation'},
-    ]
 
     page_pos_init_data = [
         {'slug': 'about'},
@@ -40,10 +33,6 @@ class Command(BaseCommand):
                             help='Create default templates.')
 
     def handle(self, *args, **options):
-
-        for d in self.snippet_pos_init_data:
-            print 'Update or create SnippetPos(%s)' % d
-            SnippetPos.objects.update_or_create(**d)
 
         for d in self.page_pos_init_data:
             print 'Update or create PagePos(%s)' % d

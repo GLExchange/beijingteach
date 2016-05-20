@@ -5,8 +5,8 @@ from django.contrib.auth.decorators import login_required
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, Http404
 from home.models import Message, Applicant
-from .models import Snippet, Page, Img
-from .forms import SnippetForm, PageForm, ImgForm
+from .models import Page, Img
+from .forms import PageForm, ImgForm
 
 dashboard_login_required = login_required(login_url='/dashboard/login/')
 
@@ -15,12 +15,6 @@ dashboard_login_required = login_required(login_url='/dashboard/login/')
 def index(request):
     messages = Message.objects.order_by('-updated')
     return render(request, 'dashboard/index.html', locals())
-
-
-@dashboard_login_required
-def snippets(request):
-    snippets = Snippet.objects.order_by('-updated')
-    return render(request, 'dashboard/snippets.html', locals())
 
 
 @dashboard_login_required
@@ -39,33 +33,6 @@ def images(request):
 def applicants(request):
     applicants = Applicant.objects.order_by('-updated')
     return render(request, 'dashboard/applicants.html', locals())
-
-
-@dashboard_login_required
-def new_snippet(request):
-    form = SnippetForm(request.POST or None)
-
-    if request.method == "POST" and form.is_valid():
-        form.save()
-        return redirect(reverse('dashboard:snippets'))
-
-    return render(request, 'dashboard/edit_snippet.html', locals())
-
-
-@dashboard_login_required
-def update_snippet(request, snippet_id):
-    snippet = get_object_or_404(Snippet, pk=snippet_id)
-    initial = {}
-    if snippet.has_pos():
-        initial = {'position': snippet.position.slug}
-
-    form = SnippetForm(request.POST or None, initial=initial, instance=snippet)
-
-    if request.method == "POST" and form.is_valid():
-        form.save()
-        return redirect(reverse('dashboard:snippets'))
-
-    return render(request, 'dashboard/edit_snippet.html', locals())
 
 
 @dashboard_login_required

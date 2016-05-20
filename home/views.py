@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, Http404
 from django.core.urlresolvers import reverse
-from dashboard.models import SnippetPos, PagePos
+from dashboard.models import PagePos
 from .forms import MessageForm, ApplicantForm
 
 
