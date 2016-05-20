@@ -1,52 +1,52 @@
 {% extends "base.html" %}
 
-
 {% block title %}CONTACT{% endblock %}
 
-
 {% block main %}
-    <!--start-contact-->
-    <div class="contact">
-        <div class="container">
-            <div class="contact-top heading">
-            </div>
-            <div class="contact-bottom"> 
-                <div class="contact-left"> 
-                    <form method="POST">
-                        {% csrf_token %}
-                        <fieldset class="col-md-6">
-                            {{ form.name.errors }}
-                            {{ form.name }}
-                            {{ form.email.errors }}
-                            {{ form.email }}
-                            {{ form.subject.errors }}
-                            {{ form.subject }}
-                        </fieldset>
-                        <fieldset class="col-md-6">
-                            {{ form.content.errors }}
-                            {{ form.content }}
-                        </fieldset>
-                        <fieldset class="col-md-2 col-md-offset-6">
-                            {{ form.non_field_errors }}
-                            <input type="submit" value="SEND">
-                        </fieldset>
-                    </form>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
+<!--start-contact-->
+<div class="contact">
+  <div class="container">
+    <div class="contact-top heading">
     </div>
-    <!--end-contact-->
-    <!--start-contact-->
-    <div class="map">
-        <div class="container">
-            <div class="map-top heading">
-                <h1>how to find us</h1>
+    <div class="contact-bottom"> 
+      <div class="contact-left"> 
+        <form method="POST">
+          {% csrf_token %}
+          <fieldset class="col-md-6">
+            {{ form.name.errors }}
+            {{ form.name }}
+            {{ form.email.errors }}
+            {{ form.email }}
+            {{ form.phone.errors }}
+            {{ form.phone }}
+            {{ form.non_field_errors }}
+            <div style="float:right">
+              <input type="submit" value="SEND">
             </div>
-            <div class="map-bottom">
-                <iframe src="http://www.google.cn/maps/embed?pb=!1m14!1m8!1m3!1d1510.3789819178965!2d-73.64499753493185!3d40.789334914297996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2862c2d641085%3A0x52a702eefaecefdd!2zU3QgTWFya3MgUGwsIFJvc2x5biBIZWlnaHRzLCBOWSAxMTU3N-e-juWbvQ!5e0!3m2!1szh-CN!2scn!4v1442701556318" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
-        </div>
+          </fieldset>
+          <fieldset class="col-md-6">
+            {{ form.subject.errors }}
+            {{ form.subject }}
+            {{ form.content.errors }}
+            {{ form.content }}
+          </fieldset>
+        </form>
+      </div>
+      <div class="clearfix"></div>
     </div>
-    <!--end-contact-->
+  </div>
+</div>
+<!--end-contact-->
+<!--start-contact-->
+<div class="map">
+  <div class="container">
+    <div class="map-top heading">
+      <h1>how to find us</h1>
+    </div>
+    <div class="map-bottom">
+      <iframe src="http://www.google.cn/maps/embed?pb=!1m14!1m8!1m3!1d1510.3789819178965!2d-73.64499753493185!3d40.789334914297996!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2862c2d641085%3A0x52a702eefaecefdd!2zU3QgTWFya3MgUGwsIFJvc2x5biBIZWlnaHRzLCBOWSAxMTU3N-e-juWbvQ!5e0!3m2!1szh-CN!2scn!4v1442701556318" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+<!--end-contact-->
 {% endblock %}

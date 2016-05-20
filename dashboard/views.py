@@ -65,7 +65,6 @@ def update_page(request, page_id):
 @dashboard_login_required
 def preview_page(request, page_id):
     page = get_object_or_404(Page, pk=page_id)
-    print page.subject
     return render(request, 'home/customized_page.html', locals())
 
 

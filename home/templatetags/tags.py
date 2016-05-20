@@ -23,5 +23,4 @@ def show_footer():
     for k, v in footer_elements.iteritems():
         footer_elements[k] = v or SiteSetting.get(k, '')
 
-    print footer_elements
     return footer_elements

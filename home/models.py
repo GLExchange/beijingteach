@@ -5,6 +5,7 @@ from django.core.mail import send_mail
 class Visitor(models.Model):
     name = models.CharField(max_length=50)
     email = models.EmailField(unique=True)
+    phone = models.CharField(max_length=16, default='')
     is_valid = models.BooleanField(default=False)
     date_joined = models.DateTimeField(auto_now_add=True, editable=False)
 

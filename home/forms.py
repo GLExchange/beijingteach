@@ -15,10 +15,15 @@ class MessageForm(StyledModelForm):
 
     name = forms.CharField(required=True, label='name')
     email = forms.EmailField(required=True, label='email')
+    phone = forms.CharField(required=True, label='phone')
 
     class Meta:
         model = Message
-        fields = ['name', 'email', 'subject', 'content']
+        fields = ['name', 'email', 'phone', 'subject', 'content']
+
+    def __init__(self, *args, **kwargs):
+        super(MessageForm, self).__init__(*args, **kwargs)
+        self.fields['content'].widget.attrs['placeholder'] = 'Message'
 
     def save(self):
         instance = super(MessageForm, self).save()
