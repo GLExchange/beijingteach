@@ -379,7 +379,7 @@ ul.nav.navbar-nav {
 /*--join-end--*/
 /*--news-starts--*/
 .news {
-	padding: 6em 0px;
+	padding: 0px 0px 6em 0px;
 }
 .news-heading h3{
 	color: #EF6286;
