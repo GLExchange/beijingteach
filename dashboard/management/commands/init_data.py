@@ -26,19 +26,19 @@ class Command(BaseCommand):
         {
             'key': 'address_line_1',
             'defaults': {
-                'value': 'GlobalLearningExchange.com'
+                'value': 'GlobalLearningXchange.com'
             },
         },
         {
             'key': 'address_line_2',
             'defaults': {
-                'value': '38 saint marks place'
+                'value': '38 Saint Marks Place'
             },
         },
         {
             'key': 'address_line_3',
             'defaults': {
-                'value': 'Roslyn heights, NY 11577'
+                'value': 'Roslyn Heights, NY 11577'
             },
         },
         {
@@ -50,7 +50,7 @@ class Command(BaseCommand):
         {
             'key': 'copyright',
             'defaults': {
-                'value': '2016 GlobalLearningExchange.com'
+                'value': '2018 GlobalLearningXchange.com'
             },
         },
         {
